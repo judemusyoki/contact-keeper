@@ -1,4 +1,3 @@
-import { STATES } from 'mongoose';
 import { SET_ALERT, REMOVE_ALERT } from '../types';
 
 // eslint-disable-next-line import/no-anonymous-default-export
