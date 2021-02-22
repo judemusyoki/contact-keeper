@@ -1,4 +1,5 @@
 import React, { useReducer } from 'react';
+import axios from 'axios';
 import { v4 as uuid } from 'uuid';
 import ContactContext from './contactContext';
 import contactReducer from './contactReducer';
@@ -14,29 +15,7 @@ import {
 
 const ContactState = (props) => {
   const initialState = {
-    contacts: [
-      {
-        id: 1,
-        name: 'Jude Musyoki',
-        email: 'jude@jeanette.com',
-        phone: '222-22-22-2',
-        type: 'personal',
-      },
-      {
-        id: 2,
-        name: 'Preben Jensen',
-        email: 'preben@jeanette.com',
-        phone: '333-444-44',
-        type: 'personal',
-      },
-      {
-        id: 3,
-        name: 'Lene Jensen',
-        email: 'lene@jeanette.com',
-        phone: '555-55-33',
-        type: 'professional',
-      },
-    ],
+    contacts: [],
     current: null,
     filtered: null,
   };
