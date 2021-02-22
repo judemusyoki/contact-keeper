@@ -73,9 +73,13 @@ const ContactState = (props) => {
       },
     };
     try {
-      await axios.put(`/api/contacts/${contact._id}`, contact, config);
+      const res = await axios.put(
+        `/api/contacts/${contact._id}`,
+        contact,
+        config
+      );
 
-      dispatch({ type: UPDATE_CONTACT, payload: contact });
+      dispatch({ type: UPDATE_CONTACT, payload: res.data });
     } catch (error) {
       dispatch({ type: CONTACT_ERROR, payload: error.response.msg });
     }
