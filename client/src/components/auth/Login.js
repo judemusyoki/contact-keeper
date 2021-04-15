@@ -15,7 +15,6 @@ const Login = (props) => {
     }
 
     if (error === 'Invalid Credentials') {
-      console.log('useEffect fired');
       setAlert(error, 'danger');
       clearErrors();
     }
@@ -36,7 +35,6 @@ const Login = (props) => {
     if (email === '' || password === '') {
       setAlert('Please fill in all fields', 'danger');
     } else {
-      console.log(email + password);
       login({
         email,
         password,

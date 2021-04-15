@@ -15,7 +15,6 @@ const Register = (props) => {
     }
 
     if (error === 'User already exists') {
-      console.log('useEffect fired');
       setAlert(error, 'danger');
       clearErrors();
     }
@@ -37,7 +36,6 @@ const Register = (props) => {
     e.preventDefault();
     if (name === '' || email === '' || password === '') {
       setAlert('Please enter all fields', 'danger');
-      console.log('Error');
     } else if (password !== password2) {
       setAlert('Passwords do not match', 'danger');
     } else {
